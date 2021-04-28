@@ -1,0 +1,139 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "API Tests including mocking and real request",
+    "line": 1,
+    "id": "api-tests-including-mocking-and-real-request",
+    "tags": [],
+    "uri": "features\\negativeTests.feature",
+    "elements": [
+      {
+        "id": "api-tests-including-mocking-and-real-request;this-mock-test-will-be-used-when-music-festival-data-api-isnt-ready",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "This mock test will be used when music festival data api isnt ready",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 3
+          },
+          {
+            "name": "@MockExampleBasic",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user mocks GET request \"http://eacodingtest.digital.energyaustralia.com.au/api/v1/festivals\" to verify the response code 429",
+            "match": {
+              "location": "steps\\api.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "API Tests including mocking and real request",
+    "line": 1,
+    "id": "api-tests-including-mocking-and-real-request",
+    "tags": [],
+    "uri": "features\\positiveTests.feature",
+    "elements": [
+      {
+        "id": "api-tests-including-mocking-and-real-request;this-mock-test-will-be-used-when-music-festival-data-api-isnt-ready",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "This mock test will be used when music festival data api isnt ready",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 3
+          },
+          {
+            "name": "@MockExampleBasic",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user mocks GET request \"http://eacodingtest.digital.energyaustralia.com.au/api/v1/festivals\" to verify the response code 200",
+            "match": {
+              "location": "steps\\api.js:14"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-tests-including-mocking-and-real-request;user-request-for-musical-festival-data-to-verify-data-correctness",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "User request for musical festival data to verify data correctness",
+        "tags": [
+          {
+            "name": "@test",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "user makes a GET request for the first time using \"http://eacodingtest.digital.energyaustralia.com.au/api/v1/festivals\"",
+            "match": {
+              "location": "steps\\api.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "user verifies that the response status code should be 200",
+            "match": {
+              "location": "steps\\api.js:58"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at World.<anonymous> (C:\\Users\\shara3\\AlintaProjects\\gitAlinta\\gitProjects\\Api-testing-using-axios-and-cucumber\\steps\\api.js:59:37)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "response name is sorted in alphabetical order",
+            "match": {
+              "location": "steps\\api.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
